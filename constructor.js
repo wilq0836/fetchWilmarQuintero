@@ -79,6 +79,7 @@ const impresion = document.getElementById("cargarModelos");
 const carrito = [];
 const compraFinal = [];
 
+
 class Carrito {
     constructor(marca, modelo, precio, especificacion, foto, cantidad) {
         this.marca = marca;
@@ -89,6 +90,10 @@ class Carrito {
         this.cantidad = cantidad;
     }
 }
+
+
+
+
 
 
 function impri (){   
@@ -114,8 +119,8 @@ function impri (){
         <h5> Precio: $ ${item.precio}</h5>     
         <h5> Estado: ${item.especificacion}</h5>                  
          `;
-         e.className="card-body";
-         e.append(botonAgregar);
+        e.className="card-body";
+        e.append(botonAgregar);
         
         let imagen = document.createElement("img");
         imagen.src = item.foto;  

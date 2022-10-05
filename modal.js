@@ -2,8 +2,7 @@
  const elementoAgregado = document.getElementById("items"); 
 
 
-function dibujarCarrito() {
-  
+function dibujarCarrito() {  
    
   elementoAgregado.innerHTML = "";
    
@@ -116,6 +115,51 @@ imprimirArticulos();
 
 
 
+
+const portafolio1 = document.getElementById("galeria-port");
+
+function alerta (){
+
+const imge = ["./img/imag1.jpg","./img/imag2.jpg","./img/imag3.jpg","./img/imag4.jpg"];
+
+for (const i of imge){
+/*h = "Clothes";
+imprimirArticulos();*/
+
+let portafolio = document.createElement("div");
+portafolio.className = "imagen-port";
+
+
+let im = document.createElement("img");
+im.src = i;
+
+
+let hover = document.createElement("div");
+hover.className = "hover-galeria";
+
+
+let icon = document.createElement("img");
+icon.src = "./icon/ciclismo.png";
+
+let parrafo = document.createElement("p");
+parrafo.innerText = "Nuestro Trabajo";
+
+//icon.append(parrafo);
+portafolio.append(im);
+hover.append(icon);
+hover.append(parrafo);
+portafolio.append(hover);
+portafolio1.append(portafolio);
+
+
+};
+
+};
+
+
+
+
+
 function imprimirArticulos (){
 
     impresion.innerHTML ="";
@@ -155,13 +199,15 @@ const pedirPost = async () => {
              imagen.src = item.images;  
              imagen.className = "card-img-top";
         
-             let carta = document.createElement("div");
+              let carta = document.createElement("div");
               carta.className = "card m-3 p-3";
               carta.style = "width: 20rem";
               carta.append(imagen);
               carta.append(e);
               cre.append(carta);
               impresion.append(cre);  
+
+             
         
           })
         
